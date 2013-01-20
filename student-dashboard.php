@@ -95,14 +95,15 @@ include_once('view.php');
 
 
         </div>
-        
+        </div>
+        <div class="container-fluid">
             <div class="push"></div>
             <hr>
-
+            <div id="footer">
             <footer>
                 <p>&copy; Flash Moustache 2013</p>
             </footer>
-
+        </div>
         </div> <!-- /container -->
     
 
