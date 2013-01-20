@@ -32,8 +32,29 @@ include_once('view.php');
            <div class="row about-text">
                 <div class="span12">
 
-                <h1>What is Flash Moustache?</h1>
-                <p>Flash Moustache engages students to learn new vocabulary words. </p>
+                <h1>Plans for the Future</h1>
+                <p>These are the features we would like to add in the future: </p>
+
+                <div>
+                    <h3>Flash cards with "levels" of achievement. This is the "space" level.</h3>
+                    <div>
+                        <img src="img/future-quiz.png ">
+                    </div>
+                    <h3>Hint overlay when student needs a hint, usage varies with learning style and age group.</h3>
+                    <div>
+                        <img src="img/future-quiz-hints.png ">
+                    </div>
+
+                    <h3>Sticker Book reward system.</h3>
+                    <div>
+                        <img src="img/future-sticker-book.png">
+                    </div>
+                    <h3>Word buckets with swipe-through words.</h3>
+                    <div>
+                        <img src="img/future-word-bucket.png">
+                    </div>
+
+                </div>
             </div>
            </div>
 

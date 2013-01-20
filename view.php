@@ -45,7 +45,7 @@ class View {
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li class="active"><a href="index.php">Home</a></li>
-                            <li><a href="about.php">About</a></li>
+                            <li><a href="about.php">Future Plans</a></li>
                             <li><a href="contact.php">Contact</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
