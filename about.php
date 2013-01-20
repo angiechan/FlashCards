@@ -1,6 +1,8 @@
 <?
 include_once('view.php');
+
 ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -31,28 +33,35 @@ include_once('view.php');
         <![endif]-->
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        <div id="wrap">
 
         <?
             print View::renderHeader();
         ?>
 
-
         <div class="container">
-            <div class="row about-text">
+
+           <div class="row about-text">
                 <div class="span12">
 
                 <h1>What is Flash Moustache?</h1>
                 <p>Flash Moustache engages students to learn new vocabulary words. </p>
-                </div>
             </div>
+           </div>
 
+        </div>
+        </div>
+        <div class="container-fluid">
             <div class="push"></div>
             <hr>
+            <div id="footer">
             <footer>
                 <p>&copy; Flash Moustache 2013</p>
             </footer>
+            </div>
 
         </div> <!-- /container -->
+    
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>

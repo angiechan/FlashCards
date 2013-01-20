@@ -32,12 +32,12 @@ include_once('view.php');
         <![endif]-->
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-        <div class="wrap">
+        <div id="wrap">
     
         <?
             print View::renderHeader();
         ?>
-        </div>
+        
     
         <div class="container">
 
@@ -45,11 +45,20 @@ include_once('view.php');
              <div id="push"></div>
             <hr>
 
-            <footer>
-                <p>&copy; Flash Moustache 2013</p>
-            </footer>
+            
         
         </div> <!-- /container -->
+        </div>
+        </div>
+        <div class="container-fluid">
+        <div class="push"></div>
+        <hr />
+        <div id="footer">
+        <footer>
+                <p>&copy; Flash Moustache 2013</p>
+        </footer>
+        </div>
+    </div>
     
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>

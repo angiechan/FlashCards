@@ -45,7 +45,7 @@ include_once('view.php');
             <div class="hero-unit">
                 <h1>Welcome!</h1>
                 <p>Flash Moustache is a fun, interactive, and easy way to remember words.</p>
-                <p><a class="btn btn-primary btn-large" href="about.html">Learn more &raquo;</a></p>
+                <p><a class="btn btn-primary btn-large" href="about.php">Learn more &raquo;</a></p>
             </div>
 
             <div class="row">
