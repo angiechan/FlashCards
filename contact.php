@@ -27,8 +27,13 @@ include_once('view.php');
         
     
         <div class="container">
+            <h1></h1>
 
+            <div class="contact">
            <script type="text/javascript" src="http://form.jotform.us/jsform/30187498483163"></script>
+
+            </div>
+
              <div id="push"></div>
             
 

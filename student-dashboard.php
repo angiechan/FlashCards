@@ -44,7 +44,11 @@ include_once('data.php');
                 </div>
 
             </div>
+            <?
+            $sid = $_REQUEST['student-id'];
+            $currentStudent = Data::getStudent($sid);
 
+            ?>
 
             <div class="row">
                 <div class="span3">
@@ -53,8 +57,8 @@ include_once('data.php');
                         <ul class="nav nav-list">
                         <?
                             foreach (Data::getStudents() as $student) {
-                                $class = $student->name=='Riley' ? 'active' : '';
-                                print "<li class='$class'><a href='wererwe'>".$student->name."</a></li>";
+                                $class = $student->name==$currentStudent->name ? 'active' : '';
+                                print "<li class='$class'><a href='student-dashboard.php?student-id=".$student->id."'>".$student->name."</a></li>";
                             }
                         ?>
                         </ul>
@@ -66,9 +70,7 @@ include_once('data.php');
                 <div class="span8">
                     
                     <?
-                        $sid = 1;
-                        $student = Data::getStudent($sid);
-                        View::renderStudentInfo($student);
+                        View::renderStudentInfo($currentStudent);
                     ?>
 
                     <ul class="nav nav-tabs">
@@ -78,10 +80,20 @@ include_once('data.php');
                     </ul>
 
                     <div class="comments-form">
-                        <form action="">
-                            <h4>Comments</h4    >
-                            <textarea rows="6" style="width:90%;" name="comment"></textarea>
-                            <p><a class="btn btn-primary " href="about.html">Send</a></p>
+                        <?
+                            $action = "https://api.tropo.com/1.0/sessions?";
+                        ?>
+                        <form method="GET" action="<?=$action?>">
+                            <input type="hidden" name="action" value="create">
+                            <input type="hidden" name="token" value="1936c91d878c9f4bbf29048a25472ba711f7975137c701bf43d05b6ad7542c0cac94523f5392b0e875283208">
+                            <h4>Comments</h4>
+                            <label for="myNumbers">Phone #&nbsp; <input type="text" name="myNumbers" ></label>
+                            <br>
+                            <textarea name="myText" rows="6" style="width:60%;"></textarea>
+                            <br>
+                            <button type="submit" class="btn btn-primary " >Send</button>
+
+                            <!-- <a class="btn btn-primary" href="http://api.tropo.com/1.0/sessions?action=create&token=1936c91d878c9f4bbf29048a25472ba711f7975137c701bf43d05b6ad7542c0cac94523f5392b0e875283208&myNumbers=6507415136&myText=Resume+of+Yael+Weinberg+from+EveryoneHacks+:)+Thanks!&myURL=www.linkedin.com/in/yaelwb/">Send</a>-->
                         </form>
                     </div>
                 </div>

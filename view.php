@@ -41,7 +41,7 @@ class View {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="index.php">Flash Moustache</a>
+                    <a class="brand" href="index.php"><div class="logo"></div></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li class="active"><a href="index.php">Home</a></li>
