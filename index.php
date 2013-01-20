@@ -41,14 +41,12 @@ include_once('view.php');
 
         <div class="container">
 
-            <!-- Main hero unit for a primary marketing message or call to action -->
+           
             <div class="hero-unit">
                 <h1>Welcome!</h1>
                 <p>Flash Moustache is a fun, interactive, and easy way to remember words.</p>
                 <p><a class="btn btn-primary btn-large" href="about.html">Learn more &raquo;</a></p>
             </div>
-
-            <!-- Example row of columns -->
 
             <div class="row">
                 <div class="span4">
@@ -70,13 +68,15 @@ include_once('view.php');
 
 
         </div>
-        
+        </div>
+        <div class="container-fluid">
             <div class="push"></div>
             <hr>
-
+            <div id="footer">
             <footer>
                 <p>&copy; Flash Moustache 2013</p>
             </footer>
+            </div>
 
         </div> <!-- /container -->
     
