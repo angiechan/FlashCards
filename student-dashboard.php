@@ -43,32 +43,32 @@ include_once('view.php');
 
 
             <div class="row">
-                <div class="span1">
-                    Students
-                </div>
-                <div class="span1">
-                    Settings
-               </div>
-                <div class="span10">
-                    
-               </div>
+
+
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#">Students</a></li>
+                </ul>
+
+
             </div>
 
 
             <div class="row">
-                <div class="span4">
+                <div class="span3">
 
-                    <aside>
-                        <ul>
+                    <aside class="student-list">
+                        <ul class="nav nav-list">
                         <?
                             foreach (Data::getStudents() as $student) {
-
-                                print "<li>".$student->name."</li>";
+                                $class = $student->name=='Riley' ? 'active' : '';
+                                print "<li class='$class'><a href='wererwe'>".$student->name."</a></li>";
                             }
                         ?>
                         </ul>
 
                     </aside>
+               </div>
+                <div class="span1">
                </div>
                 <div class="span8">
                     
@@ -85,9 +85,9 @@ include_once('view.php');
                     </ul>
 
                     <form>
-                        <h3>Comments</h3>
-                        <textarea name="comment"></textarea>
-                        <p><a class="btn btn-primary btn-large" href="about.html">Send</a></p>
+                        <h4>Comments</h4    >
+                        <textarea rows="6" style="width:90%;" name="comment"></textarea>
+                        <p><a class="btn btn-primary " href="about.html">Send</a></p>
                     </form>
                 </div>
             </div>

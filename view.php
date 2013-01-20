@@ -55,12 +55,12 @@ class View {
 
 		<div class='student-info'>
 
-			<div class="student-name">
+			<h2 class="student-name">
 				<?=$student->name?>
-			</div>
-			<div class="student-score">
+			</h2>
+			<h3 class="student-score">
 				Flash Score: <?=$student->score?>
-			</div>
+			</h3>
 		</div>
 
 

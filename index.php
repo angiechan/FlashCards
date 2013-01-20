@@ -1,6 +1,5 @@
 <?
 include_once('view.php');
-
 ?>
 
 <!DOCTYPE html>
