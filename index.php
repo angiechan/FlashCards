@@ -65,8 +65,6 @@ include_once('view.php');
                     <p><a class="btn" href="#">Register &raquo;</a></p>
                 </div>
             </div>
-
-
         </div>
         </div>
         <div class="container-fluid">
