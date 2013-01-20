@@ -49,7 +49,12 @@ body {
 .register-message { text-align:center;  width:40%;}
 
 .about-text { border:1px solid #EEE; }
-.about-text p { padding:24px 0;
+.about-text p { padding:24px 0; }
+
+.student-dashboard .nav { margin-bottom:0; }
+
+.comments-form { border-left:1px solid #CCC; margin:0.1px; padding:24px;}
+
 
 
 

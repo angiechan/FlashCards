@@ -8,10 +8,10 @@ include_once('view.php');
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
+
     <?
     View::renderHeadTag();
     ?>
-
 
     <body>
         <!--[if lt IE 7]>
@@ -20,49 +20,60 @@ include_once('view.php');
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
         <div id="wrap">
-
+    
         <?
             print View::renderHeader();
         ?>
-
+        
+    
         <div class="container">
 
-           
-            <div class="hero-unit">
-                <h1>Welcome!</h1>
-                <p>Flash Moustache is a fun, interactive, and easy way to remember words.</p>
-                <p><a class="btn btn-primary btn-large" href="about.php">Learn more &raquo;</a></p>
+            <div class="row">
+
+                <div class="span3"></div>
+                <div class="span6">
+
+                    <h1>Sign In</h1>
+                    <form action="student-dashboard.php">
+                        <label for="login">
+                            Username
+                            <input type="text" name="login">
+                        </label>
+                        <label for="password">
+                            Password
+                            <input type="password" name="password">
+                        </label>
+                        <button class="btn btn-primary">Sign In</button>
+
+                    </form>
+                </div>
+                <div class="span3"></div>
+
+
             </div>
 
-            <div class="row">
-                <div class="span4">
-                    <h2>Monitor</h2>
-                    <p>Monitor your students' progress. </p>
-                    <p><a class="btn" href="#">Register &raquo;</a></p>
-                </div>
-                <div class="span4">
-                    <h2>Identify</h2>
-                    <p>Identify excellent students. </p>
-                    <p><a class="btn" href="#">Register &raquo;</a></p>
-               </div>
-                <div class="span4">
-                    <h2>Notify</h2>
-                    <p>Tell their parents how great they're doing.</p>
-                    <p><a class="btn" href="#">Register &raquo;</a></p>
-                </div>
-            </div>
+
+
+
+
+
+             <div id="push"></div>
+            
+
+            
+        
+        </div> <!-- /container -->
         </div>
         </div>
         <div class="container-fluid">
-            <div class="push"></div>
-            <hr>
-            <div id="footer">
-            <footer>
+        <div class="push"></div>
+        <hr />
+        <div id="footer">
+        <footer>
                 <p>&copy; Flash Moustache 2013</p>
-            </footer>
-            </div>
-
-        </div> <!-- /container -->
+        </footer>
+        </div>
+    </div>
     
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>

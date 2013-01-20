@@ -2,6 +2,33 @@
 class View {
 	
 
+	public static function renderHeadTag() {
+
+		?>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+
+		<?
+
+	}
+
 	public static function renderHeader() {
 
 		?>
@@ -33,7 +60,7 @@ class View {
                                 </ul>
                             </li>
                         </ul>
-                        <form class="navbar-form pull-right">
+                        <form class="navbar-form pull-right" action="login.php">
                             <input class="span2" type="text" placeholder="Email">
                             <input class="span2" type="password" placeholder="Password">
                             <button type="submit" class="btn">Sign in</button>
@@ -60,6 +87,9 @@ class View {
 			</h2>
 			<h3 class="student-score">
 				Flash Score: <?=$student->score?>
+				<div class="progress progress-success">
+					<div class="bar" style="width: <?=$student->score?>%;"></div>
+				</div>
 			</h3>
 		</div>
 
@@ -85,37 +115,6 @@ class Student {
 
 }
 
-class Data {
-
-	public static function getStudents() {
-
-		return array(
-			new Student(array('name'=>'Sally', 'score'=>79)),
-			new Student(array('name'=>'Jack', 'score'=>13)),
-			new Student(array('name'=>'Jill', 'score'=>31)),
-			new Student(array('name'=>'Mary', 'score'=>74)),
-			new Student(array('name'=>'Bob', 'score'=>48)),
-			new Student(array('name'=>'Elliot', 'score'=>63)),
-			new Student(array('name'=>'Agatha', 'score'=>98)),
-			new Student(array('name'=>'Riley', 'score'=>42)),
-			new Student(array('name'=>'Karis', 'score'=>67))
-		);
-
-
-	}
-
-	public static function getStudent() {
-
-		return new Student(array(
-			'name'=>'Sally', 
-			'score'=>79));
-
-
-	}
-
-
-
-}
 
 
 

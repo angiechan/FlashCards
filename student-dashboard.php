@@ -1,5 +1,6 @@
 <?
 include_once('view.php');
+include_once('data.php');
 
 ?>
 
@@ -8,26 +9,13 @@ include_once('view.php');
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
+    <?
+    View::renderHeadTag();
+    ?>
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
+
+    <body class="student-dashboard">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -42,13 +30,18 @@ include_once('view.php');
         <div class="container">
 
 
+            <h1>Student Dashboard</h1>
             <div class="row">
+                <div class="span12">
 
 
-                <ul class="nav nav-tabs">
-                  <li class="active"><a href="#">Students</a></li>
-                </ul>
+                    <ul class="nav nav-tabs">
+                      <li class="active"><a href="#">2011/Grade 4</a></li>
+                      <li class=""><a href="#">2011/Grade 3</a></li>
+                      <li class=""><a href="#">2012/Grade 4</a></li>
+                    </ul>
 
+                </div>
 
             </div>
 
@@ -84,11 +77,13 @@ include_once('view.php');
                       <li><a href="#">Progress</a></li>
                     </ul>
 
-                    <form>
-                        <h4>Comments</h4    >
-                        <textarea rows="6" style="width:90%;" name="comment"></textarea>
-                        <p><a class="btn btn-primary " href="about.html">Send</a></p>
-                    </form>
+                    <div class="comments-form">
+                        <form action="">
+                            <h4>Comments</h4    >
+                            <textarea rows="6" style="width:90%;" name="comment"></textarea>
+                            <p><a class="btn btn-primary " href="about.html">Send</a></p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
