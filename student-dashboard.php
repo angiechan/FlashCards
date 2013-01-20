@@ -41,32 +41,57 @@ include_once('view.php');
 
         <div class="container">
 
-            <!-- Main hero unit for a primary marketing message or call to action -->
-            <div class="hero-unit">
-                <h1>Welcome!</h1>
-                <p>Flash Moustache is a fun, interactive, and easy way to remember words.</p>
-                <p><a class="btn btn-primary btn-large" href="about.html">Learn more &raquo;</a></p>
+
+            <div class="row">
+                <div class="span1">
+                    Students
+                </div>
+                <div class="span1">
+                    Settings
+               </div>
+                <div class="span10">
+                    
+               </div>
             </div>
 
-            <!-- Example row of columns -->
 
             <div class="row">
                 <div class="span4">
-                    <h2>Monitor</h2>
-                    <p>Monitor your students' progress. </p>
-                    <p><a class="btn" href="#">Register &raquo;</a></p>
-                </div>
-                <div class="span4">
-                    <h2>Identify</h2>
-                    <p>Identify struggling students. </p>
-                    <p><a class="btn" href="#">Register &raquo;</a></p>
+
+                    <aside>
+                        <ul>
+                        <?
+                            foreach (Data::getStudents() as $student) {
+
+                                print "<li>".$student->name."</li>";
+                            }
+                        ?>
+                        </ul>
+
+                    </aside>
                </div>
-                <div class="span4">
-                    <h2>Notify</h2>
-                    <p>Tell their parents how they're doing.</p>
-                    <p><a class="btn" href="#">Register &raquo;</a></p>
+                <div class="span8">
+                    
+                    <?
+                        $sid = 1;
+                        $student = Data::getStudent($sid);
+                        View::renderStudentInfo($student);
+                    ?>
+
+                    <ul class="nav nav-tabs">
+                      <li class="active"><a href="#">Notify Parents</a></li>
+                      <li><a href="#">View Vocabulary Words</a></li>
+                      <li><a href="#">Progress</a></li>
+                    </ul>
+
+                    <form>
+                        <h3>Comments</h3>
+                        <textarea name="comment"></textarea>
+                        <p><a class="btn btn-primary btn-large" href="about.html">Send</a></p>
+                    </form>
                 </div>
             </div>
+
 
 
         </div>

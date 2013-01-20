@@ -4,7 +4,31 @@
    Author's custom styles
    ========================================================================== */
 
+html,
+body {
+    height: 100%;
+}
 
+.hero-unit { 
+
+	background-color:#6287AC;
+}
+
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}
+
+#push,
+#footer {
+    height: 60px;
+}
+
+
+.register-message { text-align:center;  width:40%;}
 
 
 
