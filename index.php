@@ -56,12 +56,12 @@ include_once('view.php');
                 </div>
                 <div class="span4">
                     <h2>Identify</h2>
-                    <p>Identify struggling students. </p>
+                    <p>Identify excellent students. </p>
                     <p><a class="btn" href="#">Register &raquo;</a></p>
                </div>
                 <div class="span4">
                     <h2>Notify</h2>
-                    <p>Tell their parents how they're doing.</p>
+                    <p>Tell their parents how great they're doing.</p>
                     <p><a class="btn" href="#">Register &raquo;</a></p>
                 </div>
             </div>
