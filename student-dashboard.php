@@ -91,9 +91,6 @@ include_once('view.php');
                     </form>
                 </div>
             </div>
-
-
-
         </div>
         </div>
         <div class="container-fluid">
@@ -105,7 +102,6 @@ include_once('view.php');
             </footer>
         </div>
         </div> <!-- /container -->
-    
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>

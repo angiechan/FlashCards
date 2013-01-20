@@ -43,7 +43,7 @@ include_once('view.php');
 
            <script type="text/javascript" src="http://form.jotform.us/jsform/30187498483163"></script>
              <div id="push"></div>
-            <hr>
+            
 
             
         
