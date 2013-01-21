@@ -13,6 +13,7 @@
 @end
 
 @implementation FCWordsViewController
+@synthesize wordManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +31,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self reloadText];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,4 +40,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) reloadText
+{
+    if([wordManager isEmpty])
+        return;
+    [word setText:[wordManager getNextWord]];
+    [definition setText:[wordManager getNextDef]];
+    [sentence setText:[wordManager getNextSentence]];
+}
+
+- (IBAction)correct:(id)sender
+{
+    [wordManager incWordScore:[word text]];
+    [wordManager incCounter];
+    [self reloadText];
+}
+
+- (IBAction)wrong:(id)sender
+{
+    [wordManager incCounter];
+    [self reloadText];
+}
 @end

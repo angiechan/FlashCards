@@ -14,6 +14,7 @@
 @end
 
 @implementation FCAddViewController
+@synthesize wordManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,19 +43,10 @@
 
 - (IBAction) add:(id)sender
 {
-    PFUser *currentUser = [PFUser currentUser];
-    NSString *userName = @"";
-    if(currentUser)
-        userName = [currentUser username];
-    PFObject *qa = [PFObject objectWithClassName:@"Word"];
-    [qa setObject:[word text] forKey:@"word"];
-    [qa setObject:[def text] forKey:@"def"];
-    [qa setObject:[sentence text] forKey:@"sentence"];
-    [qa setObject:[NSNumber numberWithInt:0] forKey:@"correctAnswer"];
-    [qa setObject:userName forKey:@"byUser"];
-    [qa saveInBackground];
+    [wordManager addWord:[word text]
+             WithSentence:[sentence text]
+                   AndDef:[def text]];
     [self clear:self];
-    
 }
 - (IBAction) clear:(id)sender
 {
