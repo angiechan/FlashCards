@@ -27,7 +27,7 @@ include_once('data.php');
             print View::renderHeader();
         ?>
 
-        <div class="container">
+          <div class="container">
 
 
             <h1>Student Dashboard</h1>
@@ -98,7 +98,7 @@ include_once('data.php');
                     </div>
                 </div>
             </div>
-        </div>
+          </div>
         </div>
         <div class="container-fluid">
             <div class="push"></div>
