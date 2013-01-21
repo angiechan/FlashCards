@@ -26,9 +26,6 @@ class Data {
 				return $student;
 			}
 		}
-		// return new Student(array(
-		// 	'name'=>'Riley', 
-		// 	'score'=>79));
 
 	}
 
