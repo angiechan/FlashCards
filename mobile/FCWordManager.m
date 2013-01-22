@@ -71,14 +71,20 @@
 }
 - (NSString *) getNextWord
 {
+    if([self isEmpty])
+        return @"Empty vocabulary";
     return [wordsBucket objectAtIndex:bucketIndex];
 }
 - (NSString *) getNextDef
 {
+    if([self isEmpty])
+        return @"";
     return [wordToDef valueForKey:[wordsBucket objectAtIndex:bucketIndex]];
 }
 - (NSString *) getNextSentence
 {
+    if([self isEmpty])
+        return @"";
     return [wordToSentence valueForKey:[wordsBucket objectAtIndex:bucketIndex]];
 }
 @end

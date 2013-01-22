@@ -74,7 +74,16 @@
     else
     {
         urlAddress = @"https://www.google.com/search?rlz=1C1CHFA_en__487__487&sugexp=chrome,mod=2&sourceid=chrome&ie=UTF-8&q=define+";
-        urlAddress = [urlAddress stringByAppendingString:[word text]];
+        NSString *searchPhrase = [word text];
+        NSArray *searchWords = [searchPhrase componentsSeparatedByString:@" "];
+        NSString *searchStr = searchWords[0];
+        for( int i =1; i < searchWords.count ; i++)
+        {
+            searchStr = [searchStr stringByAppendingString:@"+"];
+            searchStr = [searchStr stringByAppendingString:searchWords[i]];
+        }
+            
+        urlAddress = [urlAddress stringByAppendingString:searchStr];
     }
 
 	//Create a URL object.

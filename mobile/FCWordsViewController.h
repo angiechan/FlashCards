@@ -16,7 +16,9 @@
 }
 @property FCWordManager *wordManager;
 - (IBAction)correct:(id)sender;
-- (IBAction)wrong:(id)sender;
+- (IBAction)next:(id)sender;
+- (IBAction)showDef:(id)sender;
+- (IBAction)showSentence:(id)sender;
 - (void) reloadText;
 
 @end

@@ -45,20 +45,34 @@
     if([wordManager isEmpty])
         return;
     [word setText:[wordManager getNextWord]];
-    [definition setText:[wordManager getNextDef]];
-    [sentence setText:[wordManager getNextSentence]];
+    [definition setText:@""];
+    [sentence setText:@""];
 }
 
 - (IBAction)correct:(id)sender
 {
+    if([wordManager isEmpty])
+        return;
     [wordManager incWordScore:[word text]];
     [wordManager incCounter];
     [self reloadText];
 }
 
-- (IBAction)wrong:(id)sender
+- (IBAction)next:(id)sender
 {
+    if([wordManager isEmpty])
+        return;
     [wordManager incCounter];
     [self reloadText];
+}
+
+- (IBAction)showDef:(id)sender
+{
+    [definition setText:[wordManager getNextDef]];
+}
+
+- (IBAction)showSentence:(id)sender
+{
+    [sentence setText:[wordManager getNextSentence]];
 }
 @end
