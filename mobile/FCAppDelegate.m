@@ -15,7 +15,7 @@
 #import <Parse/Parse.h>
 
 @implementation FCAppDelegate
-@synthesize tabBarController;
+@synthesize tabBarController, wordManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -30,6 +30,10 @@
     FCWordsViewController *wvc = [[FCWordsViewController alloc] init];
     FCKnowViewController *kvc = [[FCKnowViewController alloc] init];
     FCAboutViewController *abvc = [[FCAboutViewController alloc] init];
+    wordManager = [[FCWordManager alloc] init];
+    [advc setWordManager:wordManager];
+    [wvc setWordManager:wordManager];
+    [kvc setWordManager:wordManager];
     
     tabBarController = [[UITabBarController alloc]init];
     NSArray *viewControllers = [NSArray arrayWithObjects:lvc, advc, wvc, kvc, abvc, nil];

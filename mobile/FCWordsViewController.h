@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FCWordManager.h"
 @interface FCWordsViewController : UIViewController
+{
+    IBOutlet UILabel *word;
+    IBOutlet UILabel *sentence;
+    IBOutlet UILabel *definition;
+}
+@property FCWordManager *wordManager;
+- (IBAction)correct:(id)sender;
+- (IBAction)next:(id)sender;
+- (IBAction)showDef:(id)sender;
+- (IBAction)showSentence:(id)sender;
+- (void) reloadText;
 
 @end

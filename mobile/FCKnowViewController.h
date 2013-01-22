@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FCWordManager.h"
 @interface FCKnowViewController : UIViewController
 {
     IBOutlet UITableView *table;
 }
+@property FCWordManager *wordManager;
 @end

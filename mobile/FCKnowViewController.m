@@ -13,6 +13,7 @@
 @end
 
 @implementation FCKnowViewController
+@synthesize wordManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

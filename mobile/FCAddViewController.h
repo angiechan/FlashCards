@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FCWordManager.h"
 
 @interface FCAddViewController : UIViewController
 <UITextFieldDelegate>
@@ -16,6 +17,7 @@
     IBOutlet UITextField *sentence;
     IBOutlet UIWebView *webView;
 }
+@property FCWordManager *wordManager;
 
 - (IBAction) add:(id)sender;
 - (IBAction) clear:(id)sender;

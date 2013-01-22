@@ -14,6 +14,7 @@
 @end
 
 @implementation FCAddViewController
+@synthesize wordManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,19 +43,10 @@
 
 - (IBAction) add:(id)sender
 {
-    PFUser *currentUser = [PFUser currentUser];
-    NSString *userName = @"";
-    if(currentUser)
-        userName = [currentUser username];
-    PFObject *qa = [PFObject objectWithClassName:@"Word"];
-    [qa setObject:[word text] forKey:@"word"];
-    [qa setObject:[def text] forKey:@"def"];
-    [qa setObject:[sentence text] forKey:@"sentence"];
-    [qa setObject:[NSNumber numberWithInt:0] forKey:@"correctAnswer"];
-    [qa setObject:userName forKey:@"byUser"];
-    [qa saveInBackground];
+    [wordManager addWord:[word text]
+             WithSentence:[sentence text]
+                   AndDef:[def text]];
     [self clear:self];
-    
 }
 - (IBAction) clear:(id)sender
 {
@@ -82,7 +74,16 @@
     else
     {
         urlAddress = @"https://www.google.com/search?rlz=1C1CHFA_en__487__487&sugexp=chrome,mod=2&sourceid=chrome&ie=UTF-8&q=define+";
-        urlAddress = [urlAddress stringByAppendingString:[word text]];
+        NSString *searchPhrase = [word text];
+        NSArray *searchWords = [searchPhrase componentsSeparatedByString:@" "];
+        NSString *searchStr = searchWords[0];
+        for( int i =1; i < searchWords.count ; i++)
+        {
+            searchStr = [searchStr stringByAppendingString:@"+"];
+            searchStr = [searchStr stringByAppendingString:searchWords[i]];
+        }
+            
+        urlAddress = [urlAddress stringByAppendingString:searchStr];
     }
 
 	//Create a URL object.
