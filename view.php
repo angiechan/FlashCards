@@ -1,6 +1,5 @@
 <?
 class View {
-	
 
 	public static function renderHeadTag() {
 
